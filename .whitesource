@@ -32,7 +32,7 @@
     ],
     "terraform": {
       "rangeStrategy": "bump"
-    }
+    },
     "vulnerabilityAlerts": {
       "enabled": true
     },
