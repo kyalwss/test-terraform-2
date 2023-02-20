@@ -28,7 +28,11 @@
       {
         "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
         "automerge": true
-      }
+      },
+      {
+        "matchDepType": "required-version",
+        "versioning": "hashicorp"
+        }
     ],
     "terraform": {
       "rangeStrategy": "bump"
