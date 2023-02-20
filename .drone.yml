@@ -1,0 +1,23 @@
+---
+kind: pipeline
+name: terraform
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: terraform plan
+  image: hashicorp/terraform:1.3.8
+  commands:
+  - cd terraform
+  - terraform init
+  - terraform workspace select devl
+  - terraform plan
+  environment:
+    TF_VAR_image_tag: ${DRONE_COMMIT_SHA,,}
+    AWS_SHARED_CREDENTIALS_FILE: /drone/src/credentials
+  when:
+    branch:
+      - devl
+      - main
