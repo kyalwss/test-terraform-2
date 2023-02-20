@@ -17,6 +17,30 @@
   "remediateSettings": {
     "workflowRules": {
       "enabled": true
+    },
+    "enableRenovate": true,
+    "extends": ["config:base"],
+    "packageRules": [
+      {
+        "groupName": "Terraform",
+        "matchPackageNames": ["hashicorp/terraform", "terraform"]
+      },
+      {
+        "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+        "automerge": true
+      }
+    ],
+    "terraform": {
+      "rangeStrategy": "bump"
+    }
+    "vulnerabilityAlerts": {
+      "enabled": true
+    },
+    "minor": {
+      "automerge": true
+    },
+    "patch": {
+      "automerge": true
     }
   }
 }
