@@ -22,7 +22,7 @@
     "extends": ["config:base"],
     "packageRules": [
       {
-        "groupName": "Terraform",
+        "groupName": "terraform",
         "matchPackageNames": ["hashicorp/terraform", "terraform"]
       },
       {
