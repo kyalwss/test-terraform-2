@@ -30,7 +30,7 @@
         "automerge": true
       },
       {
-        "matchDepType": "required-version",
+        "matchDepType": "required_version",
         "versioning": "hashicorp"
         }
     ],
