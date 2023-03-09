@@ -8,7 +8,7 @@ platform:
 
 steps:
 - name: terraform plan
-  image: hashicorp/terraform:1.3.9
+  image: hashicorp/terraform:1.4.0
   commands:
   - cd terraform
   - terraform init
